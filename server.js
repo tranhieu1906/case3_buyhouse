@@ -1,16 +1,9 @@
-const mysql = require('mysql2')
-var connection = mysql.createConnection({
-  host: "127.0.0.1",
-  user: "root",
-  password: "12345678",
-  database: "codegym_edu",
-});
+const http = require("http");
+const router = require("./src/router/router");
 
-connection.connect((err)=>{
-    if(err) {
-        console.log(err.message)
-        return
-    }else{
-        console.log("Connection")
-    }
-});
+const PORT = 8080;
+
+let server =  http.createServer(router);
+server.listen(PORT,()=>{
+    console.log('server listening on port '+PORT);
+})
