@@ -8,13 +8,13 @@ class SiteController {
     let isLogin = CookieAndSession.checkingSession(req, res);
     if (isLogin) {
       fs.readFile("./view/base.html", "utf-8", async (err, data) => {
-        if(err) throw err;
-        res.writeHead(200, {"content-type": "text/html"});
-        data = data.replace("{user}",isLogin[1]) 
+        if (err) throw err;
+        res.writeHead(200, { "content-type": "text/html" });
+        data = data.replace("{user}", isLogin[1]);
         res.write(data);
         res.end();
       });
-    }else{
+    } else {
       let data = await getTeamplates.readTemplate("./view/home.html");
       res.writeHead(200, { "Content-Type": "text/html" });
       res.write(data);
@@ -35,15 +35,38 @@ class SiteController {
   }
   async PostPage(req, res) {
     let isLogin = CookieAndSession.checkingSession(req, res);
-    console.log(isLogin)
-    if(isLogin){
+    console.log(isLogin);
+    if (isLogin) {
       let data = await getTeamplates.readTemplate("./view/post.html");
       res.writeHead(200, { "Content-Type": "text/html" });
       res.write(data);
       res.end();
+    } else {
+      res.writeHead(301, { Location: "/login" });
+      res.end();
+    }
+  }
+  async ChangePassword(req, res) {
+    let isLogin = CookieAndSession.checkingSession(req, res);
+    if (isLogin) {
+      let data = await getTeamplates.readTemplate("./view/changePassword.html");
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
+    } else {
+      res.writeHead(301, { location: "/login" });
+      res.end();
+    }
+  }
+  async ChangeInfo(req, res) {
+    let isLogin = CookieAndSession.checkingSession(req, res);
+    if (isLogin) {
+      let data = await getTeamplates.readTemplate("./view/changeInfo.html");
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.write(data);
+      res.end();
     }else{
-      console.log("sadasdasd")
-      res.writeHead(301, {Location:"/login"});
+      res.writeHead(301, { location: "/login" });
       res.end();
     }
   }

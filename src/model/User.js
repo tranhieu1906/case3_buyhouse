@@ -23,5 +23,27 @@ class User {
         throw err;
       });
   }
+  async changePassword(data) {
+    let sql = data;
+    return await db
+      .runMySQL(sql)
+      .then((result) => {
+        return result;
+      })
+      .catch((err) => {
+        throw err;
+      });
+  }
+  async CheckOldPassword(data) {
+    let sql = data;
+    return await db
+      .runMySQL(sql)
+      .then((result) => {
+        return result;
+      })
+      .catch((err) => {
+        throw err;
+      });
+  }
 }
 module.exports = new User();

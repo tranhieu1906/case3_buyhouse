@@ -51,6 +51,20 @@ function router(req, res, next) {
       case "/post":
         SiteController.PostPage(req, res);
         break;
+      case "/changepass":
+        if (req.method === "GET") {
+          SiteController.ChangePassword(req, res);
+        } else {
+          AuthController.ChangePassword(req, res);
+        }
+        break;
+      case "/change-info":
+        if (req.method === "GET") {
+          SiteController.ChangeInfo(req, res);
+        } else {
+          AuthController.ChangeInfo(req, res);
+        }
+        break;
       default:
         SiteController.ShowPageNotFound(req, res);
     }

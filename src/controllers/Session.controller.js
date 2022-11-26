@@ -42,7 +42,6 @@ class CookieAndSession {
       console.log(error.message);
     }
   }
-
   async deleteSession(req) {
     try {
       let cookies = req.headers.cookie
