@@ -17,10 +17,101 @@
     <header>
         <!-- place navbar here -->
     </header>
-    <main>
-        <div class="">
+    <main class="d-flex justify-content-center al">
+        <div class="w-50 ">
             <div class="container shadow-sm p-3 mb-5 bg-body rounded">
-
+                <ul class="nav nav-tabs d-none d-lg-flex" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                            data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+                            aria-selected="true">Nhà đất bán</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                            data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane"
+                            aria-selected="false">Nhà đất cho
+                            thuê</button>
+                    </li>
+                </ul>
+                <!-- Tabs content -->
+                <div class="tab-content accordion" id="myTabContent">
+                    <div class="tab-pane fade show active accordion-item" id="home-tab-pane" role="tabpanel">
+                        <form action="" method="post">
+                            <div class="p-4">
+                                <p class="fw-bold">Thông tin cơ bản</p>
+                                <strong>Tỉnh, thành phố *</strong>
+                                <select class="form-select mb-3 mt-1 form-select-sm" id="floatingSelect"
+                                    aria-label="Floating label select example" style="max-height: 500px ;">
+                                    <option selected>Chọn</option>
+                                    <option value="HN">Hà Nội</option>
+                                    <option value="HCM">Hồ Chí Minh</option>
+                                    <option value="TN">Thái nguyên</option>
+                                </select>
+                                <strong>Quận, huyện *</strong>
+                                <select class="form-select mb-3 mt-1 form-select-sm" id="floatingSelect"
+                                    aria-label="Floating label select example">
+                                    <option selected>Chọn</option>
+                                    <option value="Quận Ba Đình">Quận Ba Đình</option>
+                                    <option value="Quận Hoàn Kiếm">Quận Hoàn Kiếm</option>
+                                    <option value="Quận Đống Đa">Quận Đống Đa</option>
+                                    <option value="Quận Thanh Xuân">Quận Thanh Xuân</option>
+                                    <option value="Quận Cầu Giấy">Quận Cầu Giấy</option>
+                                    <option value="Quận Hoàng Mai">Quận Hoàng Mai</option>
+                                    <option value="Quận Hai Bà Trưng">Quận Hai Bà Trưng</option>
+                                    <option value="Quận Tây Hồ">Quận Tây Hồ</option>
+                                </select>
+                                <strong>Phường, xã *</strong>
+                                <select class="form-select mb-3 mt-1 form-select-sm" id="floatingSelect"
+                                    aria-label="Floating label select example">
+                                    <option selected>Chọn</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="p-4">
+                                <p class="fw-bold">Thông tin bài viết</p>
+                                <p class="fw-bold">Tiêu đề *</p>
+                                <input type="text" name="title" class="w-100 form-control"
+                                    placeholder="VD: Bán nhà riêng 50m2 chính chủ tại cầu giấy" style="height: 75px ;">
+                                <p>Tối thiểu 30 ký tự, tối đa 99 ký tự</p>
+                                <p class="fw-bold">Mô tả *</p>
+                                <div class="form-floating">
+                                    <textarea class="form-control" name="discription" placeholder="Leave a comment here" id="floatingTextarea" style="min-height:150px ;"></textarea>
+                                    <label for="floatingTextarea">Nhập mô tả về bất động sản của bạn</label>
+                                    <p>Tối thiểu 30 ký tự, tối đa 3.000 ký tự</p>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <p class="fw-bold">Thông tin bất động sản</p>
+                                <p class="fw-bold">Diện tích *</p>
+                                <input type="text" name="area" class="form-control"
+                                    placeholder="Nhập diện tích , VD 80">
+                                <p class="fw-bold">Mức giá *</p>
+                                <div class="d-flex gap-3">
+                                    <input type="text" class="w-75" placeholder="Nhập giá, VD 12000000">
+                                    <select class="form-select form-select-sm w-25" id="floatingSelect" aria-label="Floating label select example">
+                                        <option selected>Chọn</option>
+                                        <option value="1">VND</option>
+                                        <option value="2">Giá / m2</option>
+                                        <option value="3">Thỏa thuận</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="p-4">
+                                <p class="fw-bold">Hình ảnh & Video</p>
+                                <ol>
+                                    <li>Hãy dùng ảnh thật, không trùng, không chèn số điện thoại</li>
+                                    <li>Mỗi ảnh kích thước tối thiểu 100x100 px, tối đa 15 MB</li>
+                                </ol>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-pane fade accordion-item" id="profile-tab-pane" role="tabpanel"
+                    aria-labelledby="profile-tab" tabindex="0">
+                    <h1>Hell1o</h1>
+                </div>
             </div>
         </div>
     </main>

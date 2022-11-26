@@ -13,8 +13,8 @@ class User {
       });
   }
   async InsertUser(data) {
-    let sql = `insert into User(phone,passwordUser) values ('${data.phone}','${data.password}')`;
-    await db
+    let sql = `insert into User(nameUser,phone,passwordUser) values ('${data.name}', '${data.phone}','${data.password}')`;
+    return await db
       .runMySQL(sql)
       .then((result) => {
         return result;

@@ -1,7 +1,8 @@
 const fs = require("fs");
+const qs = require("qs");
 const cookie = require("cookie");
 class CookieAndSession {
-  async WriteSessionAndCookie(req, res, data) {
+  async writeCookieAndSession(req, res, data) {
     try {
       let sessionName = Date.now();
       let dataSession = [...data, sessionName];
@@ -24,6 +25,30 @@ class CookieAndSession {
           res.end();
         }
       );
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+  checkingSession(req) {
+    try {
+      let cookies = req.headers.cookie
+        ? cookie.parse(req.headers.cookie).key
+        : "";
+      let tokenData = fs.existsSync("src/session/" + cookies + ".txt")
+        ? JSON.parse(fs.readFileSync("src/session/" + cookies + ".txt", "utf-8"))
+        : false;
+      return tokenData;
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
+
+  async deleteSession(req) {
+    try {
+      let cookies = req.headers.cookie
+        ? cookie.parse(req.headers.cookie).key
+        : "";
+      fs.unlinkSync("src/session/" + cookies + ".txt");
     } catch (error) {
       console.log(error.message);
     }

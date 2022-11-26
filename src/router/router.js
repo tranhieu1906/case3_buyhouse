@@ -11,6 +11,7 @@ function router(req, res, next) {
     webp: "image/webp",
     jpg: "images/jpg",
     png: "images/png",
+    jpeg: "images/jpeg",
     js: "text/javascript",
     css: "text/css",
     svg: "image/svg+xml",
@@ -20,7 +21,7 @@ function router(req, res, next) {
     eot: "application/vnd.ms-fontobject",
   };
   const filesDefences = path.match(
-    /\.js|\.css|\.png|\.svg|\.jpg|\.ttf|\.woff|\.woff2|\.eot|\.webp/
+    /\.js|\.css|\.png|\.svg|\.jpg|\.ttf|\.woff|\.woff2|\.eot|\.webp|\.jpeg/
   );
   if (filesDefences) {
     const extension = mimeTypes[filesDefences[0].toString().split(".")[1]];
@@ -31,15 +32,24 @@ function router(req, res, next) {
       case "/":
         SiteController.showHomePage(req, res);
         break;
+      case "/home":
+        AuthController.LoginController(req, res);
+        break;
       case "/login":
-        if (req.method == "GET") {
-          SiteController.showHomePage(req, res);
-        } else {
-          AuthController.LoginController(req, res);
-        }
+        SiteController.LoginPage(req, res);
+        break;
+      case "/logout":
+        AuthController.logOutUser(req, res);
         break;
       case "/register":
-        AuthController.RegisterController(req, res);
+        if (req.method === "GET") {
+          SiteController.RegisterPage(req, res);
+        } else {
+          AuthController.RegisterController(req, res);
+        }
+        break;
+      case "/post":
+        SiteController.PostPage(req, res);
         break;
       default:
         SiteController.ShowPageNotFound(req, res);

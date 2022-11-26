@@ -28,20 +28,28 @@ class AuthController {
             userData[i].dateDK,
             userData[i].gender,
           ];
-          let view = await getTeamplates.readTemplate("./view/base.html");
-          view = view.replace("{user}", userData[i].nameUser);
-          await CookieAndSession.WriteSessionAndCookie(req, res, dataSql);
-          res.writeHead(200, { "Content-Type": "text/html" });
-          res.write(view);
-          res.end();
+          CookieAndSession.writeCookieAndSession(req, res, dataSql);
+          return;
         }
       }
-      res.writeHead(301, { Location: "/" });
+      this.userWrong = true;
+      res.statusCode = 302;
+      res.setHeader("Location", "/login");
       res.end();
     });
     req.on("error", (err) => {
       console.log(err);
     });
+  }
+  async logOutUser(req, res) {
+    try {
+      await CookieAndSession.deleteSession(req);
+      res.statusCode = 302;
+      res.setHeader("Location", "/");
+      res.end();
+    } catch (e) {
+      console.log(e.message);
+    }
   }
   RegisterController(req, res) {
     let data = "";
@@ -50,7 +58,7 @@ class AuthController {
     });
     req.on("end", () => {
       let newData = qs.parse(data);
-      console.log(newData);
+
       User.InsertUser(newData);
       res.writeHead(301, { Location: "/" });
       res.end();

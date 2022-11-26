@@ -16,11 +16,11 @@
             color: black;
             text-decoration: none;
         }
-
+    
         .modal-header {
             border-bottom: none;
         }
-
+    
         .modal-footer {
             border-top: none;
         }
@@ -32,22 +32,16 @@
         <!-- place navbar here -->
     </header>
     <main class="w-50 m-auto mt-5 shadow-lg p-3 mb-5 bg-body rounded">
-        <form action="/register" method="post">
-            <div class="modal-content flex-row-reverse">
-                <button type="button" class="btn-close p-3" data-bs-dismiss="modal" ; aria-label="Close"></button>
-                <div class="modal-body d-flex justify-content-between">
-                    <div class="img">
-                        <img src="./img/login.png" alt="">
-                    </div>
+        <div class="modal-content flex-row-reverse">
+            <div class="modal-body d-flex justify-content-evenly">
+                <div class="img">
+                    <img src="./img/login.png" alt="">
+                </div>
+                <form method="post" action="/home">
                     <div class="login-content pt-5">
+
                         <p>Xin Chào bạn </p>
-                        <h3>Đăng ký tài khoản mới</h3>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1"><i
-                                    class="fa-solid fa-phone"></i></i></span>
-                            <input type="text" class="form-control" placeholder="Phone Number" aria-label="Username"
-                                aria-describedby="basic-addon1" name="phone">
-                        </div>
+                        <h3>Đăng nhập để tiếp tục</h3>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1"><i class="fa-regular fa-user"></i></span>
                             <input type="text" class="form-control" placeholder="Username" aria-label="Username"
@@ -59,13 +53,18 @@
                                 aria-describedby="basic-addon1" name="password">
                             <a class="input-group-text"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
                         </div>
-                        <div class="input-group mb-4" id="show_hide_password">
-                            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-lock"></i></span>
-                            <input type="password" class="form-control" placeholder="Confirm password"
-                                aria-label="Username" aria-describedby="basic-addon1" name="confirm">
-                            <a class="input-group-text"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                        <button type="submit" class="w-100 btn btn-danger mb-3">
+                            Đăng Nhập
+                        </button>
+                        <div class="d-flex justify-content-between mb-5">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                <label class="form-check-label" for="flexCheckIndeterminate">
+                                    Nhớ tài khoản
+                                </label>
+                            </div>
+                            <a href="" class="text-danger">Quên mật khẩu</a>
                         </div>
-                        <button type="submit" class="w-100 btn btn-danger mb-3">Đăng Ký</button>
                         <div class="social pb-5">
                             <a href="">
                                 <button type="button" class="btn btn-light px-5 py-2">
@@ -78,10 +77,15 @@
                                         class="fa-brands fa-google pe-1"></i>Goggle</button>
                             </a>
                         </div>
+                        <p class="d-flex align-items-center justify-content-center">Chưa là thành
+                            viên?
+                            <a href="" class="text-danger">Đăng ký</a>
+                            tại đây
+                        </p>
                     </div>
-                </div>
+                </form>
             </div>
-        </form>
+        </div>
     </main>
     <footer>
         <!-- place footer here -->
