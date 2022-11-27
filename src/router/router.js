@@ -51,6 +51,9 @@ function router(req, res, next) {
       case "/post":
         SiteController.PostPage(req, res);
         break;
+      case "/manager-post":
+        SiteController.ManagePostPage(req, res);
+        break;
       case "/changepass":
         if (req.method === "GET") {
           SiteController.ChangePassword(req, res);

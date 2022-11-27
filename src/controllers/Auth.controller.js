@@ -97,10 +97,20 @@ class AuthController {
       console.log(err);
     });
   }
-  async ChangeInfo(req,res){
+  async ChangeInfo(req, res) {
     let data = "";
     req.on("data", (chunk) => {
       data += chunk;
+    });
+    req.on("end", async () => {
+      let inputForm = qs.parse(data);
+      const idUser = await CookieAndSession.checkingSession(req)[0];
+      User.UpdateUser(inputForm, idUser);
+      res.writeHead(301, { "Location" : "/" });
+      res.end();
+    });
+    req.on("error", (err) => {
+      console.log(err);
     });
   }
 }

@@ -45,5 +45,17 @@ class User {
         throw err;
       });
   }
+  async UpdateUser(data,id) {
+    console.log(data)
+    let sql = `update User set nameUser = '${data.nameInfo}' ,address = '${data.addressInfo}',phone = '${data.phoneInfo}',email = '${data.emailInfo}',cccd = '${data.cccdInfo}',gender = '${data.gender}' where ${id} = userId`;
+    return await db
+      .runMySQL(sql)
+      .then((result) => {
+        return result;
+      })
+      .catch((err) => {
+        throw err;
+      });
+  }
 }
 module.exports = new User();

@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Đăng bài</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="./img/icon.png" sizes="57x57">
+    <script src="https://kit.fontawesome.com/55c01ab189.js" crossorigin="anonymous"></script>
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -14,10 +16,101 @@
 </head>
 
 <body>
-    <header>
-        <!-- place navbar here -->
+    <header class="shadow-sm p-3 mb-5 bg-body rounded">
+        <div class="container-fluid mt-4 d-flex align-items-center">
+            <div class="logo">
+                <a href="/">
+                    <img src="./img/logo.svg" alt="logo" style="height: 48px;">
+                </a>
+            </div>
+            <div class="d-flex p-2 w-100 ">
+                <div class="dropdown">
+                    <a class="btn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Nhà đất bán
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <a class="btn " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Nhà đất bán
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown">
+                    <a class="btn " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Nhà đất bán
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <a class="btn " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Nhà đất bán
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <a class="btn " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Nhà đất bán
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="dropdown">
+                    <a class="btn " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <a class="btn " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-regular fa-bell"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </div>
+
+                <div class="px-4 py-2 rounded border-1 border w-75">
+                    <a href="/post"><button class="btn">Post</button></a>
+                </div>
+            </div>
+
+        </div>
     </header>
-    <main class="d-flex justify-content-center al">
+    <main class="d-flex justify-content-center mt-5">
         <div class="w-50 ">
             <div class="container shadow-lg p-3 mb-5 bg-body rounded">
                 <!-- Tabs content -->
@@ -26,35 +119,8 @@
                         <form action="" method="post">
                             <div class="p-4">
                                 <p class="fw-bold">Thông tin cơ bản</p>
-                                <strong>Tỉnh, thành phố *</strong>
-                                <select class="form-select mb-3 mt-1 form-select-sm" id="floatingSelect"
-                                    aria-label="Floating label select example" style="max-height: 500px ;">
-                                    <option selected>Chọn</option>
-                                    <option value="HN">Hà Nội</option>
-                                    <option value="HCM">Hồ Chí Minh</option>
-                                    <option value="TN">Thái nguyên</option>
-                                </select>
-                                <strong>Quận, huyện *</strong>
-                                <select class="form-select mb-3 mt-1 form-select-sm" id="floatingSelect"
-                                    aria-label="Floating label select example">
-                                    <option selected>Chọn</option>
-                                    <option value="Quận Ba Đình">Quận Ba Đình</option>
-                                    <option value="Quận Hoàn Kiếm">Quận Hoàn Kiếm</option>
-                                    <option value="Quận Đống Đa">Quận Đống Đa</option>
-                                    <option value="Quận Thanh Xuân">Quận Thanh Xuân</option>
-                                    <option value="Quận Cầu Giấy">Quận Cầu Giấy</option>
-                                    <option value="Quận Hoàng Mai">Quận Hoàng Mai</option>
-                                    <option value="Quận Hai Bà Trưng">Quận Hai Bà Trưng</option>
-                                    <option value="Quận Tây Hồ">Quận Tây Hồ</option>
-                                </select>
-                                <strong>Phường, xã *</strong>
-                                <select class="form-select mb-3 mt-1 form-select-sm" id="floatingSelect"
-                                    aria-label="Floating label select example">
-                                    <option selected>Chọn</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                </select>
+                                <strong class="mb-3 d-block">Địa chỉ chi tiết *</strong>
+                                <input type="text" name="addressPost" class="form-control">
                             </div>
                             <div class="p-4">
                                 <p class="fw-bold">Thông tin bài viết</p>
@@ -93,6 +159,15 @@
                                     <li>Hãy dùng ảnh thật, không trùng, không chèn số điện thoại</li>
                                     <li>Mỗi ảnh kích thước tối thiểu 100x100 px, tối đa 15 MB</li>
                                 </ol>
+                                <div class="mt-3">
+                                    <form action="/upload" method="POST" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label for="example-input-file">&nbsp;</label>
+                                            <input type="file" name="file" class="form-control-file border">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
                             </div>
                             <div class="p-4">
                                 <p class="fw-bold">Thông tin liên hệ</p>
@@ -104,28 +179,144 @@
                                 <input type="text" class="form-control" name="addresPost">
                                 <p class="fw-bold">Email</p>
                                 <input type="email" class="form-control" name="emailPost">
+                                
                                 <div class="d-flex justify-content-end">
                                     <button class="btn btn-danger px-5 mt-3">Đăng</button>
                                 </div>
                             </div>
+
                         </form>
                     </div>
-                </div>
-                <div class="tab-pane fade accordion-item" id="profile-tab-pane" role="tabpanel"
-                    aria-labelledby="profile-tab" tabindex="0">
-                    <h1>Hell1o</h1>
                 </div>
             </div>
         </div>
     </main>
-    <footer>
-        <!-- place footer here -->
+    <footer class="mt-5">
+        <!-- Footer -->
+        <footer class="text-center text-lg-start bg-light text-muted">
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+                    <span>Get connected with us on social networks:</span>
+                </div>
+                <!-- Left -->
+
+                <!-- Right -->
+                <div>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                <i class="fas fa-gem me-3"></i>HieuTranCompany
+                            </h6>
+                            <p>
+                                Here you can use rows and columns to organize your footer content. Lorem ipsum
+                                dolor sit amet, consectetur adipisicing elit.
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Products
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">NodeJs</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">JS</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">HTML</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">CSS</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Useful links
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">Pricing</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Settings</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Orders</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Help</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                            <p><i class="fas fa-home me-3"></i> Thai Nguyen City</p>
+                            <p>
+                                <i class="fas fa-envelope me-3"></i>
+                                nguyentranhieugttn@gmail.com
+                            </p>
+                            <p><i class="fas fa-phone me-3"></i> 01234567891</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2021 Copyright: HieuTranCompaly
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
     </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
         </script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
